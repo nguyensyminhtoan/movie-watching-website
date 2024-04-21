@@ -3,14 +3,16 @@ import NavBar from "../Component/NavBar/NarBar";
 import SearchForm from "../Component/SearchForm/SearchForm";
 import ResultList from "../Component/ResultList/ResultList";
 
-const Search = () => {
+const Search = () =>
+{
   const [data, setData] = useState({});
-  const searchHandler = async (searchKeyWord, genre, mediaType, language, year) => {
+  const searchHandler = async (searchKeyWord, genre, mediaType, language, year) =>
+  {
     const request = await fetch(
-      `http://localhost:5000/api/movies/search?token=RYOcWM4JW&genre=${genre}&mediaType=${mediaType}&language=${language}&year=${year}`,{method:"POST" ,headers:{"Content-Type": "application/json"},body:JSON.stringify({keyword:searchKeyWord})}
+      `https://movie-watching-website.onrender.com/api/movies/search?token=RYOcWM4JW&genre=${genre}&mediaType=${mediaType}&language=${language}&year=${year}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ keyword: searchKeyWord }) }
     );
     const data = await request.json();
-    
+
     setData(data);
   };
 

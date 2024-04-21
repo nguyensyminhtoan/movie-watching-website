@@ -8,14 +8,17 @@ const requests = {
   fetchHorrorMovies: `discover?token=${apiKey}&genreId=27`,
   fetchRomanceMovies: `discover?token=${apiKey}&genreId=10749`,
   fetchDocumentaries: `discover?token=${apiKey}&genreId=99`,
-  
+
 };
-const fetchData = async (endpoint) => {
-  try {
-    const response = await fetch(`http://localhost:5000/api/movies/${endpoint}`);
+const fetchData = async (endpoint) =>
+{
+  try
+  {
+    const response = await fetch(`https://movie-watching-website.onrender.com/movies/${endpoint}`);
     const data = await response.json();
     return data;
-  } catch (err) {
+  } catch (err)
+  {
     console.error("Error fetching data:", err);
     throw err;
   }
@@ -29,5 +32,5 @@ export const movieApi = {
   fetchHorrorMovies: () => fetchData(requests.fetchHorrorMovies),
   fetchRomanceMovies: () => fetchData(requests.fetchRomanceMovies),
   fetchDocumentaries: () => fetchData(requests.fetchDocumentaries),
-  
+
 };
