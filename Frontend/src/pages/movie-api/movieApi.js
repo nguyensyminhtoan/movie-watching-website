@@ -14,7 +14,7 @@ const fetchData = async (endpoint) =>
 {
   try
   {
-    const response = await fetch(`https://movie-watching-website.onrender.com/movies/${endpoint}`);
+    const response = await fetch(`https://movie-watching-website.onrender.com/api/movies/${endpoint}`);
     const data = await response.json();
     return data;
   } catch (err)
