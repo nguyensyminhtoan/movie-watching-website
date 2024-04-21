@@ -1,0 +1,21 @@
+.movies {
+  display: flex;
+  list-style: none;
+  overflow-x: hidden;
+  white-space: nowrap;
+  padding: 30px 40px;
+  padding-left: 40px;
+  background-size: cover;
+  flex-wrap: wrap;
+}
+.movies .image {
+  width: 11rem;
+  height: 17rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.movies .image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

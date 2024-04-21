@@ -1,0 +1,58 @@
+.movie {
+  display: flex;
+  list-style: none;
+  overflow-x: hidden;
+  white-space: nowrap;
+  padding: 30px 0;
+  padding-left: 10px;
+  background-size: cover;
+}
+.backdrop {
+  display: flex;
+  list-style: none;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  padding-left: 10px;
+}
+/* width */
+.backdrop::-webkit-scrollbar {
+  height: 5px;
+}
+
+/* Track */
+.backdrop::-webkit-scrollbar-track {
+  background: #888;
+}
+
+/* Handle */
+.backdrop::-webkit-scrollbar-thumb {
+  background: #181818;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.backdrop::-webkit-scrollbar-thumb:hover {
+  background: #181818;
+}
+.movie .image {
+  width: 11rem;
+  height: 17rem;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.movie .image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.backdrop .image {
+  width: 15rem;
+  height: 10rem;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.backdrop .image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
