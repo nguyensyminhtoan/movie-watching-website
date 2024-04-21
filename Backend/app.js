@@ -4,7 +4,7 @@ const cors = require('cors')
 const movieRouter = require('./routes/movie')
 const authMiddleware = require('./middleware/authMiddleware')
 app.use(cors({
-  origin: "https://movie-keqy.onrender.com/"
+  origin: "https://movie-keqy.onrender.com"
 }))
 app.use(express.json())
 //middleware để xác thực người dùng
